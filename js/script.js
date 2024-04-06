@@ -4,16 +4,13 @@ function insertarNombre(evento) {
 
     let nombre = document.getElementById("nombre").value;
 
-    if (nombre == "" || nombre.length < 3){
+    if (nombre == "" || nombre.length < 3 || typeof nombre == 'number'){
         alert("Ingresa un nombre que sea válido")
     }
-    else{
-       
+    else{       
         let opcion = "<li>" + nombre + "</li>"
-    
         let lista = document.getElementById("lista")
-
-        lista.innerHTML += opcion;        
-    }
-    
+        lista.innerHTML += opcion;      
+        ingreso.reset()  
+    }    
 }
